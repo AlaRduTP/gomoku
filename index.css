@@ -1,0 +1,114 @@
+body {
+        padding: 0;
+        margin: 0;
+        background-color: burlywood;
+}
+
+#game-board {
+        display: inline-grid;
+        grid-template-columns: repeat(15, auto);
+}
+
+.outer-content {
+        display: table;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+}
+
+.middle-content {
+        display: table-cell;
+        vertical-align: middle;
+}
+
+.inner-content {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+}
+
+.cross {
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        border-radius: 50%;
+}
+
+.cross:hover {
+        background-color: #f5deb3cc;
+}
+
+.vl {
+        height: 100%;
+        border-left: 1px solid black;
+        margin-left: 20px;
+        position: absolute;
+}
+
+.hl {
+        width: 100%;
+        border-top: 1px solid black;
+        margin-top: 20px;
+        position: absolute;
+}
+
+.dot {
+        height: 10px;
+        width: 10px;
+        background-color: black;
+        border-radius: 50%;
+        margin-left: 15px;
+        margin-top: 15px;
+        position: absolute;
+}
+
+.chess {
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        margin-left: 3px;
+        margin-top: 3px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+}
+
+.chess-black {
+        background-color: black;
+        color: white;
+        box-shadow: inset 3px 3px 5px #aaa7;
+}
+
+.chess-black[last-move] {
+        box-shadow: inset 3px 3px 5px #aaa7, 0px 0px 0px 6px #f5deb3cc;
+}
+
+.chess-white {
+        background-color: white;
+        color: black;
+        box-shadow: inset -2px -2px 2px #7777;
+}
+
+.chess-white[last-move] {
+        box-shadow: inset -2px -2px 2px #7777, 0px 0px 0px 6px #f5deb3cc;
+}
+
+@keyframes combo-anime {
+        0%      { background-color: transparent; }
+        50%     { background-color: #ff6347aa; }
+        100%    { background-color: transparent; }
+}
+
+.combo {
+        animation-name: combo-anime;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+}

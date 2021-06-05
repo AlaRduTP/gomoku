@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    
+    <link rel="stylesheet" href="./index.css">
+
+    <title>Gomoku</title>
+  </head>
+  <body>
+    <div class="cross">
+      <div class="chess chess-black" id="turn-hint">1</div>
+    </div>
+    <div class="outer-content">
+      <div class="middle-content">
+        <div class="inner-content">
+          <div id="game-board">
+            <!-- <div class="cross">
+              <div class="vl"></div>
+              <div class="hl"></div>
+              <div class="dot"></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
