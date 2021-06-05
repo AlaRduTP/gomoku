@@ -1,4 +1,7 @@
 const { app, BrowserWindow, Menu } = require('electron');
+
+if (require('electron-squirrel-startup')) return app.quit();
+
 const path = require('path');
 
 const template = [
@@ -43,16 +46,14 @@ const template = [
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
 
-function createWindow(isAgent) {
-  BrowserWindow.getAllWindows().forEach(win => {
-    win.close()
-  })
+var lastWin = null;
 
+function createWindow(isAgent) {
   const win = new BrowserWindow({
     resizable: false,
     fullscreenable: false,
-    width: 700,
-    height: 700,
+    width: 600,
+    height: 600,
     useContentSize: true,
     backgroundColor: 'burlywood',
     webPreferences: {
@@ -64,6 +65,12 @@ function createWindow(isAgent) {
 
   // win.webContents.openDevTools();
   win.loadFile('index.html');
+
+  if (lastWin !== null) {
+    lastWin.close();
+  }
+
+  lastWin = win;
 }
 
 app.whenReady().then(() => {

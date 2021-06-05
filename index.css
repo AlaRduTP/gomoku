@@ -24,7 +24,7 @@ body {
 }
 
 .inner-content {
-        width: 600px;
+        width: 540px;
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -32,8 +32,8 @@ body {
 
 .cross {
         background-color: transparent;
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         padding: 0;
         margin: 0;
         position: relative;
@@ -47,14 +47,14 @@ body {
 .vl {
         height: 100%;
         border-left: 1px solid black;
-        margin-left: 20px;
+        margin-left: 18px;
         position: absolute;
 }
 
 .hl {
         width: 100%;
         border-top: 1px solid black;
-        margin-top: 20px;
+        margin-top: 18px;
         position: absolute;
 }
 
@@ -63,14 +63,14 @@ body {
         width: 10px;
         background-color: black;
         border-radius: 50%;
-        margin-left: 15px;
-        margin-top: 15px;
+        margin-left: 13px;
+        margin-top: 13px;
         position: absolute;
 }
 
 .chess {
-        height: 34px;
-        width: 34px;
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
         margin-left: 3px;
         margin-top: 3px;
